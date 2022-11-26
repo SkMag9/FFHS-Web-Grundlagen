@@ -1,0 +1,68 @@
+/*Combined CSS for Pizza, Salads and Softdrinks*/
+.flexbox-container-food {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    align-items: stretch;
+}
+@media screen and (max-width: 1200px){
+    .flexbox-container-food {
+        display: grid;
+        grid-template-columns: 100%;
+        align-items: stretch;
+    }
+    main {
+        font-size: 20px;
+    }
+}
+
+.food-item {
+    width: 100%;
+    display:flex;
+}
+
+.food-picture {
+    width: 40%;
+    padding: 5px;
+}
+
+.food-picture > img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.food-content {
+    width: 60%;
+    display:flex;
+    align-self: center;
+    padding: 5px;
+}
+
+.food-content {
+    width:60%;
+}
+
+.food-info {
+    width: 70%;
+}
+.food-buy {
+    width: 30%;
+    display:flex;
+    align-self: center;
+}
+.food-buy > * {
+    width: 50%;
+}
+.food-buy > p {
+    text-align: right;
+    margin-right: 10px;
+}
+.food-buy > button {
+    border-radius: 10px;
+    width:auto;
+    height:auto;
+}
+.food-buy > button > img {
+    width: 30px;
+}

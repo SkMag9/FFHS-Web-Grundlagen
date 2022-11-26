@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Feedback</title>
+    <link rel="Stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/feedback.css">
+    <script type="text/javascript" src="../js/navmenu.js"></script>
+    <script type="text/javascript" src="../js/formvalidation.js"></script>
+    <script type="text/javascript" src="../js/feedback.js"></script>
+</head>
+<body>
+<header>
+    <nav>
+        <div id="logo-container">
+            <a href="../index.html">
+                <img id="logo" src="../img/Logo_Pizza_Projekt.png" alt="Pizzeria Logo">
+            </a>
+        </div>
+        <div class="navbar" id="navbar">
+            <a href="javascript:void(0);" class="icon" onclick="openMenu();">
+                <img class="navpicture" src="../img/menu-icon.png" alt="Menu Icon">
+            </a>
+            <a href="pizza.html">
+                <div class="nav-element">
+                    <img class="navpicture" src="../img/pizza.png" alt="Picture of a pizza">
+                    <p>Pizza</p>
+                </div>
+            </a>
+            <a href="salad.html">
+                <div class="nav-element">
+                    <img class="navpicture" src="../img/salad.png" alt="Picture of a salad">
+                    <p>Salad</p>
+                </div>
+            </a>
+            <a href="softdrinks.html">
+                <div class="nav-element">
+                    <img class="navpicture" src="../img/softdrink.png" alt="Picture of a Softdrink">
+                    <p>Softdrink</p>
+                </div>
+            </a>
+            <a href="feedback.html">
+                <div class="nav-element">
+                    <img class="navpicture"  src="../img/rating.png" alt="Feedback icon">
+                    <p>Feedback</p>
+                </div>
+            </a>
+        </div>
+    </nav>
+</header>
+<main>
+    <div class="title">
+        <h1>Tell us what you think</h1>
+    </div>
+    <div id="confirmation" class="">
+        <p>Thank you for your feedback!</p>
+    </div>
+    <form id="feedback" name="feedback" onsubmit="event.preventDefault();">
+        <p id="required-text">* - Required</p>
+        <div class="formRow">
+            <p class="labeltext">How do you like our pizza? *</p>
+            <div class="options" >
+                <input type="radio" id="awesome-pizza" name="fav_pizza" value="awesome" required>
+                <label for="awesome-pizza">Awesome</label>
+
+                <input type="radio" id="good-pizza" name="fav_pizza" value="good">
+                <label for="good-pizza">Good</label>
+
+                <input type="radio" id="okay-pizza" name="fav_pizza" value="okay">
+                <label for="okay-pizza">Okay</label>
+
+                <input type="radio" id="poor-pizza" name="fav_pizza" value="poor">
+                <label for="poor-pizza">Poor</label>
+            </div>
+        </div>
+
+        <div class="formRow">
+            <p class="labeltext">What do you think about our prices? *</p>
+            <div class="options">
+                <input type="radio" id="fair-price" name="price" value="fair" required>
+                <label for="fair-price">Fair</label>
+
+                <input type="radio" id="okay-price" name="price" value="okay">
+                <label for="okay-price">Okay</label>
+
+                <input type="radio" id="expensive-price" name="price" value="expensive">
+                <label for="expensive-price">Expensive</label>
+            </div>
+        </div>
+
+        <div class="formRow">
+            <label for="formName" class="label">Your name? *</label>
+            <div class="options">
+                <input type="text" id="formName" name="name" placeholder="Max Muster" maxlength="30">
+                <div id="errorName"></div>
+            </div>
+        </div>
+        <div class="formRow">
+            <label for="formEmail" class="label">Your e-mail address? *</label>
+            <div class="options">
+                <input type="text" id="formEmail" name="email" placeholder="max.muster@hotmail.com" maxlength="40">
+                <div id="errorEmail"></div>
+            </div>
+        </div>
+        <div class="formRow">
+            <label for="formBetter" class="label">What can we do better? *</label>
+            <div class="options">
+                <textarea id="formBetter" name="feedbackText" rows="3" maxlength="500"></textarea>
+                <div id="errorBetter"></div>
+            </div>
+        </div>
+        <div class="formRow">
+            <button id="submitButton" onclick="giveFeedback();" type="submit" disabled> Send</button>
+        </div>
+    </form>
+
+    <div id="feedbackResults"></div>
+</main>
+<footer>
+    <div class="flexbox-container-footer">
+        <div class="flexbox-footer-element" id="business-hours">
+            <h3>Business Hours</h3>
+            <table id="table-business-hours">
+                <tr>
+                    <td>Monday</td>
+                    <td>11.a.m. - 23 p.m.</td>
+                </tr>
+                <tr>
+                    <td>Tuesday</td>
+                    <td>11.a.m. - 23 p.m.</td>
+                </tr>
+                <tr>
+                    <td>Wednesday</td>
+                    <td>11.a.m. - 23 p.m.</td>
+                </tr>
+                <tr>
+                    <td>Thursday</td>
+                    <td>11.a.m. - 23 p.m.</td>
+                </tr>
+                <tr>
+                    <td>Friday</td>
+                    <td>11.a.m. - 24 p.m.</td>
+                </tr>
+                <tr>
+                    <td>Saturday</td>
+                    <td>11.a.m. - 24 p.m.</td>
+                </tr>
+                <tr>
+                    <td>Sunday</td>
+                    <td>Closed</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="flexbox-footer-element" id="socials">
+            <h3>Follow us</h3>
+            <table id="table-socials">
+                <tr>
+                    <td>
+                        <a href="https://facebook.com">
+                            <img class="social-logo" src="../img/facebook.png" alt="Facebook Logo">
+                        </a>
+                    </td>
+                    <td>
+                        <a class="social-link" href="https://facebook.com">
+                            Facebook
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a href="https://instagram.com">
+                            <img class="social-logo" src="../img/instagram.png" alt="Instagram Logo">
+                        </a>
+                    </td>
+                    <td>
+                        <a class="social-link" href="https://instagram.com">
+                            Instagram
+                        </a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="flexbox-footer-element" id="address">
+            <h3>Address</h3>
+            <p>Tony's Pizza Factory</p>
+            <p>2122 N Clark St</p>
+            <p>Chicago, IL 60614, USA</p>
+        </div>
+    </div>
+
+    <div id="quote">
+        <p>"The pizzeria is one place I have been waiting to visit for a long time. The reason being their rustica pizza which absolutely blew me away." - Jimmy</p>
+    </div>
+
+</footer>
+</body>
+</html>

@@ -1,0 +1,154 @@
+/*Global*/
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+a:link {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+a:visited {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+a:hover {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+a:active {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/*Header*/
+header {
+    overflow: hidden;
+    margin: 0 0 0 10px;
+    padding: 0;
+}
+#logo {
+    float: left;
+    height: 150px;
+}
+
+.navbar {
+    float:right;
+    overflow: hidden;
+}
+
+.navbar a {
+    margin: 0;
+    padding: 0;
+    float: left;
+    display: block;
+    width: 125px;
+    text-align: center;
+    align-self: center;
+}
+.navbar > a:hover {
+    background-color: whitesmoke;
+}
+
+.navpicture{
+    width: 70px;
+    height: 70px;
+    align-self: center;
+}
+.nav-element {
+    margin-top: 20px;
+}
+.navbar .icon {
+    display: none;
+}
+@media screen and (max-width: 1000px) {
+    .navbar a {display: none;}
+    .navbar a.icon {
+        float: right;
+        display: block;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .navbar.responsive {position: relative;}
+    .navbar.responsive .icon {
+        position: relative;
+        right: 0;
+        top: 0;
+    }
+    .navbar.responsive a {
+        float: none;
+        display: block;
+    }
+}
+
+/*Main*/
+main {
+    margin: 0;
+    padding: 0;
+}
+.title{
+    min-height:200px;
+    background-image: url('../img/Pizza_Home_screen.jpg');
+    background-size: cover;
+    position: relative;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+h1 {
+    font-size: 60px;
+    color: white;
+    text-shadow: black 0 0 5px;
+    text-align: center;
+    line-height: 200px;
+}
+
+#confirmation {
+    visibility: hidden;
+    text-align: center;
+    border: 2px green solid;
+    border-radius: 20px;
+    margin: 0 20px 50px;
+    background-color: lightgreen;
+    color: green;
+}
+
+.visible {
+    visibility: visible !important;
+}
+
+/*Footer*/
+th,td {
+    padding: 0 10px ;
+}
+footer {
+    color: gray;
+}
+.flexbox-container-footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 50px;
+}
+.flexbox-footer-element {
+    text-align: left;
+    margin: 50px 100px 50px 100px;
+}
+.social-logo {
+    width: 30px;
+    height: 30px;
+}
+.social-link {
+    font-weight: lighter !important;
+    color: gray !important;
+}
+#quote{
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}

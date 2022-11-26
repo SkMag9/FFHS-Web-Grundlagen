@@ -1,0 +1,107 @@
+
+#required-text {
+    float: left;
+    font-size: small;
+    margin-left: 10px;
+}
+
+form {
+    margin: auto;
+    width: 30%;
+}
+
+.formRow {
+    width: 100%;
+    margin: 10px;
+    overflow: hidden;
+}
+
+.labeltext {
+    display: inline;
+    margin: 0;
+    padding: 0;
+}
+
+#errorName > p, #errorEmail > p, #errorBetter > p {
+    margin: 0;
+    padding: 0;
+    color: red;
+    font-size: small;
+}
+
+.options {
+    float: right;
+}
+
+textarea {
+    font-family: inherit;
+    font-size: small;
+    resize: vertical;
+    width: 300px;
+    padding: 2px;
+    margin: 0;
+    border-width: 1px;
+}
+
+input[type=text] {
+    width: 300px;
+    padding: 2px;
+    margin: 0;
+    font-family: inherit;
+    font-size: small;
+    border-width: 1px;
+}
+
+#submitButton {
+    float: right;
+    width: 20%;
+}
+
+#ratings {
+    margin-left:auto;
+    margin-right: auto;
+    text-align: left;
+}
+
+
+@media screen and (max-width: 1700px) {
+    form {
+        margin: auto;
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    form {
+        margin: auto;
+        width: 75%;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    form {
+        margin: auto;
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .labeltext, .label {
+        display: block;
+        margin: 0;
+        padding-bottom: 3px;
+    }
+
+    .options {
+        display: block;
+        float: left;
+        width: 100%;
+        margin: 0;
+        padding-bottom: 10px;
+    }
+
+    #submitButton {
+        float: right;
+        width: 30%;
+    }
+}

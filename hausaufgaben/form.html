@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML Form</title>
+    <script>
+        function popUp()
+        {
+            let vorname  = document.getElementById("vorname").value.toString();
+            let nachname = document.getElementById("nachname").value.toString();
+
+            alert("Der Name lautet " + vorname + " " + nachname);
+        }
+
+        function umlautCheck(str)
+        {
+            let charArray = str.split("");
+
+            for (let i = 0; i < charArray.length; i++)
+            {
+                switch (charArray[i]){
+                    case "ä":
+                        charArray[i] = "a"
+                        break;
+                    case "ö":
+                        charArray[i] = "o"
+                        break;
+                    case "ü":
+                        charArray[i] = "u"
+                        break;
+                    case "Ä":
+                        charArray[i] = "A"
+                        break;
+                    case "Ö":
+                        charArray[i] = "O"
+                        break;
+                    case "Ü":
+                        charArray[i] = "U"
+                        break;
+                }
+            }
+
+            return charArray.join("");
+        }
+
+        function umlaut()
+        {
+            let vorname  = document.getElementById("vorname").value.toString();
+            let nachname = document.getElementById("nachname").value.toString();
+
+            document.getElementById("vorname").value  = umlautCheck(vorname);
+            document.getElementById("nachname").value = umlautCheck(nachname);
+        }
+
+        function onSubmit()
+        {
+            popUp();
+            umlaut();
+        }
+    </script>
+</head>
+<body>
+    <form id="testform" action="#" onsubmit="onSubmit()">
+        <label for="vorname">Vorname:</label>
+        <input id="vorname" name="vorname" pattern="[A-ZÄÖÜa-zäöü]+" required/><br>
+
+        <label for="nachname">Nachname: </label>
+        <input id="nachname" name="nachname" pattern="[A-ZÄÖÜa-zäöü]+" required/><br>
+
+        <label for="email">E-Mail-Adresse: </label>
+        <input type="email" id="email" name="email" required/><br>
+
+        <label for="buchung">Datum der Buchung: </label>
+        <input type="date" id="buchung" name="buchung" required/><br>
+
+        <label for="telefonnummer">Telefonnummer: </label>
+        <input type="tel" id="telefonnummer" name="telefonnummer" /><br>
+
+        <label for="plz">PLZ: </label>
+        <input id="plz" name="plz" pattern="\d{4}"  oninvalid="this.setCustomValidity('Die PLZ besteht aus 4 Zahlen (Schweizer Format)')" required/><br>
+
+        <input type="submit"/>
+    </form>
+</body>
+</html>

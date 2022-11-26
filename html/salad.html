@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Salad</title>
+    <link rel="Stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/food.css">
+    <script type="text/javascript" src="../js/navmenu.js"></script>
+    <script type="text/javascript" src="../js/getfooditems.js"></script>
+    <script type="text/javascript" src="../js/order.js"></script>
+</head>
+<body onload="getSalad()">
+<header>
+    <nav>
+        <div id="logo-container">
+            <a href="../index.html">
+                <img id="logo" src="../img/Logo_Pizza_Projekt.png" alt="Pizzeria Logo">
+            </a>
+        </div>
+        <div class="navbar" id="navbar">
+            <a href="javascript:void(0);" class="icon" onclick="openMenu();">
+                <img class="navpicture" src="../img/menu-icon.png" alt="Menu Icon">
+            </a>
+            <a href="pizza.html">
+                <div class="nav-element">
+                    <img class="navpicture" src="../img/pizza.png" alt="Picture of a pizza">
+                    <p>Pizza</p>
+                </div>
+            </a>
+            <a href="salad.html">
+                <div class="nav-element">
+                    <img class="navpicture" src="../img/salad.png" alt="Picture of a salad">
+                    <p>Salad</p>
+                </div>
+            </a>
+            <a href="softdrinks.html">
+                <div class="nav-element">
+                    <img class="navpicture" src="../img/softdrink.png" alt="Picture of a Softdrink">
+                    <p>Softdrink</p>
+                </div>
+            </a>
+            <a href="feedback.html">
+                <div class="nav-element">
+                    <img class="navpicture"  src="../img/rating.png" alt="Feedback icon">
+                    <p>Feedback</p>
+                </div>
+            </a>
+        </div>
+    </nav>
+</header>
+<main>
+    <div class="title">
+        <h1>Salad</h1>
+    </div>
+    <div id="confirmation" class="">
+        <p>Your order was placed</p>
+    </div>
+    <div id="salads" class="flexbox-container-food"></div>
+</main>
+<footer>
+    <div class="flexbox-container-footer">
+        <div class="flexbox-footer-element" id="business-hours">
+            <h3>Business Hours</h3>
+            <table id="table-business-hours">
+                <tr>
+                    <td>Monday</td>
+                    <td>11.a.m. - 23 p.m.</td>
+                </tr>
+                <tr>
+                    <td>Tuesday</td>
+                    <td>11.a.m. - 23 p.m.</td>
+                </tr>
+                <tr>
+                    <td>Wednesday</td>
+                    <td>11.a.m. - 23 p.m.</td>
+                </tr>
+                <tr>
+                    <td>Thursday</td>
+                    <td>11.a.m. - 23 p.m.</td>
+                </tr>
+                <tr>
+                    <td>Friday</td>
+                    <td>11.a.m. - 24 p.m.</td>
+                </tr>
+                <tr>
+                    <td>Saturday</td>
+                    <td>11.a.m. - 24 p.m.</td>
+                </tr>
+                <tr>
+                    <td>Sunday</td>
+                    <td>Closed</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="flexbox-footer-element" id="socials">
+            <h3>Follow us</h3>
+            <table id="table-socials">
+                <tr>
+                    <td>
+                        <a href="https://facebook.com">
+                            <img class="social-logo" src="../img/facebook.png" alt="Facebook Logo">
+                        </a>
+                    </td>
+                    <td>
+                        <a class="social-link" href="https://facebook.com">
+                            Facebook
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a href="https://instagram.com">
+                            <img class="social-logo" src="../img/instagram.png" alt="Instagram Logo">
+                        </a>
+                    </td>
+                    <td>
+                        <a class="social-link" href="https://instagram.com">
+                            Instagram
+                        </a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="flexbox-footer-element" id="address">
+            <h3>Address</h3>
+            <p>Tony's Pizza Factory</p>
+            <p>2122 N Clark St</p>
+            <p>Chicago, IL 60614, USA</p>
+        </div>
+    </div>
+
+    <div id="quote">
+        <p>"The pizzeria is one place I have been waiting to visit for a long time. The reason being their rustica pizza which absolutely blew me away." - Jimmy</p>
+    </div>
+
+</footer>
+</body>
+</html>

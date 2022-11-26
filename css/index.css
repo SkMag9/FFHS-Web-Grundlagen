@@ -1,0 +1,36 @@
+main {
+    min-height: 600px;
+    background-image: url('../img/Pizza_Home_screen.jpg');
+    background-size: cover;
+}
+
+.homepicture{
+    width: 200px;
+    height: 200px;
+}
+
+.flexbox-home {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-bottom: 50px;
+}
+
+.flexbox-home-element {
+    text-align: center;
+    margin: 0 10px 20px;
+    padding: 30px 75px;
+
+    background-color: #FF994B;
+    border-radius: 15px;
+}
+
+.flexbox-home-element > a {
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 30px;
+}
+
+h1 {
+    padding-top: 100px !important;
+}
